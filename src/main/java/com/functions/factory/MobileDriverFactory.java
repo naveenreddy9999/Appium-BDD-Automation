@@ -21,12 +21,26 @@ public class MobileDriverFactory {
         //mobile Capabilities
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("appium:platformName", configReader.getValue("platformName"));
+        System.out.println("appium:platformName : " + configReader.getValue("platformName"));
+
         desiredCapabilities.setCapability("appium:deviceName", configReader.getValue("deviceName"));
+        System.out.println("appium:deviceName : " + configReader.getValue("deviceName"));
+
         desiredCapabilities.setCapability("appium:platformVersion", configReader.getValue("platformVersion"));
+        System.out.println("appium:platformVersion : "+ configReader.getValue("platformVersion"));
+
         desiredCapabilities.setCapability("appium:automationName", configReader.getValue("automationName"));
+        System.out.println("appium:automationName : "+ configReader.getValue("automationName"));
+
         desiredCapabilities.setCapability("appium:udid", configReader.getValue("udid"));
+        System.out.println("appium:udid : "+ configReader.getValue("udid"));
+
         desiredCapabilities.setCapability("appium:appActivity", configReader.getValue("appActivity"));
+        System.out.println("appium:appActivity : "+ configReader.getValue("appActivity"));
+
         desiredCapabilities.setCapability("appium:appPackage", configReader.getValue("appPackage"));
+        System.out.println("appium:appPackage : "+ configReader.getValue("appPackage"));
+
         desiredCapabilities.setCapability("appium:newCommandTimeout", 3600);
         desiredCapabilities.setCapability("appium:connectHardwareKeyboard", true);
 

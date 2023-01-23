@@ -8,10 +8,6 @@ import java.util.*;
 
 public class ConfigReader {
 
-    public static Properties prop;
-
-    public static Map<String, Object> scenarioContext = new HashMap<>();
-    public static Map<String, Object> driver_name = new HashMap<>();
     public static Map<String, Object> configValue = new HashMap<>();
     public static Map<String, Object> config = new HashMap<>();
 
@@ -68,7 +64,7 @@ public class ConfigReader {
 
     }
 
-    public  String getValue(String key) {
+    public String getValue(String key) {
         String get = init_prop().get(key).toString();
         return get;
     }
@@ -77,20 +73,6 @@ public class ConfigReader {
         configValue.put(key, value);
     }
 
-
-
-
-//    public static void setDriver(String key, WebDriver value) {
-//
-//        driver_name.put(key, value);
-//
-//    }
-//
-//    public static WebDriver getDriver(String key) {
-//        return (WebDriver) driver_name.get(key);
-//    }
-
-
     public static void setConfigValue(String key, String value) {
         config.put(key, value);
     }
@@ -98,11 +80,6 @@ public class ConfigReader {
     public static String getConfigValue(String key) {
         return (String) config.get(key);
     }
-
-
-//    public static void setScenarioContext(String key, Object value) {
-//        scenarioContext.put(key, value);
-//    }
 
 
     public static void setScenarioContext(String key, Object value) {

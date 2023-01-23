@@ -4,13 +4,13 @@ import org.testng.*;
 
 public class RetryListener implements IRetryAnalyzer {
 
-    int failedCount =0;
-    int Limit=2;
+    int failedCount = 0;
+    int Limit = 2;
 
     @Override
     public boolean retry(ITestResult result) {
 
-        if (failedCount<Limit){
+        if (failedCount < Limit) {
             failedCount++;
             return true;
         }

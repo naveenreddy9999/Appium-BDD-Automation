@@ -26,13 +26,13 @@ public class ApplicationHooks {
             if (scenario.isFailed()) {
                 scenario.log("scenario status : " + scenario.getStatus());
                 String screenshotName = scenario.getName().replaceAll(" ", "_");
-                byte[] sourcePath = ((TakesScreenshot) configReader.getDriver("driver")).getScreenshotAs(OutputType.BYTES);
+                byte[] sourcePath = ((TakesScreenshot) ConfigReader.getDriver("driver")).getScreenshotAs(OutputType.BYTES);
                 scenario.attach(sourcePath, "image/png", screenshotName);
-                configReader.getDriver("driver").quit();
+                ConfigReader.getDriver("driver").quit();
 
             } else {
                 scenario.log("scenario status : " + scenario.getStatus());
-                configReader.getDriver("driver").quit();
+                ConfigReader.getDriver("driver").quit();
             }
         } catch (Exception e) {
             System.out.println("After scenario ");
